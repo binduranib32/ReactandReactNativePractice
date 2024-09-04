@@ -9,7 +9,7 @@ const newsCategoryList = [
     id: 2,
     title: 'Politics',
     slug: 'politics',
-    selected: false,
+    selected: true,
   },
   {
     id: 3,
