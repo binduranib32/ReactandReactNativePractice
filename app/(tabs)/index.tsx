@@ -22,6 +22,7 @@ const Page = (props: Props) => {
   const [breakingNews, setBreakingNews] = useState<NewsDataType[]>([]);
   const [news, setNews] = useState<NewsDataType[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     getBreakingNews();
@@ -73,7 +74,7 @@ const Page = (props: Props) => {
   return (
     <ScrollView style={[styles.container, { paddingTop: safeTop }]}>
       <Header />
-      <SearchBar withHorizontalPadding={true} />
+      <SearchBar withHorizontalPadding={true} setSearchQuery={setSearchQuery} />
       {/*   {breakingNews.map((item, index) => (
         <Text>{item.title}</Text>
       ))} */}
